@@ -1,0 +1,288 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Facturalo: generador de facturas online gratis</title>
+<meta name="description" content="Crea facturas profesionales online en 2 minutos y descárgalas en PDF. Gratis, sin registro, con logo, impuestos y varias monedas.">
+<link rel="canonical" href="https://TU-USUARIO.github.io/TU-REPO/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Facturalo: generador de facturas online gratis">
+<meta property="og:description" content="Crea facturas profesionales en 2 minutos y descárgalas en PDF.">
+<meta property="og:url" content="https://TU-USUARIO.github.io/TU-REPO/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"¿Cómo hago una factura online gratis?","acceptedAnswer":{"@type":"Answer","text":"Completa tus datos, los del cliente y las líneas de la factura. Verás la vista previa al instante y podrás descargarla en PDF."}},{"@type":"Question","name":"¿Necesito registrarme?","acceptedAnswer":{"@type":"Answer","text":"No. Puedes crear facturas sin cuenta."}}]}</script>
+<style>
+:root{--bg:#F4F7F5;--sf:#fff;--ink:#14201C;--mute:#5B6B65;--line:#D8E0DB;--brand:#0F5C4D;--bi:#fff;--sig:#F2B544;--fld:#fff;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0E1613;--sf:#16211D;--ink:#E8EFEB;--mute:#9AAAA3;--line:#26352F;--brand:#3FBF9F;--bi:#06140F;--fld:#101A17}}
+:root[data-theme="dark"]{--bg:#0E1613;--sf:#16211D;--ink:#E8EFEB;--mute:#9AAAA3;--line:#26352F;--brand:#3FBF9F;--bi:#06140F;--fld:#101A17}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 "DM Sans",system-ui,sans-serif}
+h1,h2,h3{font-family:"Bricolage Grotesque","DM Sans",system-ui,sans-serif;line-height:1.08;margin:0;letter-spacing:-.02em}
+:focus-visible{outline:2px solid var(--brand);outline-offset:2px}
+.wrap{max-width:1180px;margin:0 auto;padding:0 20px}
+header{display:flex;align-items:center;justify-content:space-between;padding:18px 0}
+.logo{font:800 22px "Bricolage Grotesque",sans-serif;letter-spacing:-.03em}
+.logo i{display:inline-block;width:10px;height:10px;background:var(--sig);border-radius:2px;margin-left:3px}
+nav{display:flex;gap:18px;align-items:center;font-size:15px}
+nav a{color:var(--mute);text-decoration:none}
+.badge{border:1px solid var(--line);background:var(--sf);border-radius:99px;padding:5px 12px;font-size:14px;color:var(--ink)}
+.hero{padding:28px 0 26px;max-width:760px}
+.hero h1{font-size:clamp(34px,6vw,60px);font-weight:800}
+.hero p{color:var(--mute);font-size:18px;margin:14px 0 0;max-width:56ch}
+.tool{display:grid;gap:22px;grid-template-columns:1fr;align-items:start}
+@media(min-width:960px){.tool{grid-template-columns:minmax(0,5fr) minmax(0,6fr)}.pv{position:sticky;top:16px}}
+.card{background:var(--sf);border:1px solid var(--line);border-radius:14px;padding:20px}
+.card h2{font-size:20px;margin-bottom:14px}
+.g{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.full{grid-column:1/-1}
+label{display:block;font-size:14px;font-weight:500;color:var(--mute)}
+input,select,textarea{width:100%;margin-top:4px;padding:9px 10px;border:1px solid var(--line);border-radius:8px;background:var(--fld);color:var(--ink);font:inherit}
+textarea{resize:vertical;min-height:60px}
+input[type=color]{padding:2px;height:40px;cursor:pointer}
+.items{display:grid;gap:8px;margin:6px 0 10px}
+.it{display:grid;grid-template-columns:1fr 62px 86px 34px;gap:6px}
+.it input{margin:0}
+.x{border:1px solid var(--line);background:none;border-radius:8px;color:var(--mute);cursor:pointer;font-size:18px}
+.btn{font:700 15px "DM Sans",sans-serif;border:1px solid var(--line);background:var(--sf);color:var(--ink);border-radius:10px;padding:11px 16px;cursor:pointer}
+.btn.pri{background:var(--brand);color:var(--bi);border-color:var(--brand)}
+.lock{font-size:12px;background:var(--sig);color:#3a2a00;border-radius:99px;padding:1px 8px;margin-left:6px;font-weight:700}
+.note{font-size:13px;color:var(--mute);margin:8px 0 0}
+.paper{background:#fff;color:#1a1a1a;border-radius:6px;padding:34px;box-shadow:0 1px 0 #0001,0 18px 40px -18px #0005;position:relative;overflow:hidden;font-size:14px;line-height:1.5}
+.paper .top{display:flex;justify-content:space-between;gap:16px;border-bottom:3px solid var(--ac,#0F5C4D);padding-bottom:16px}
+.paper h3{font-size:30px;color:var(--ac,#0F5C4D);text-align:right}
+.paper img{max-height:54px;max-width:160px;display:block}
+.pn{font:800 20px "Bricolage Grotesque",sans-serif}
+.pm{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:18px 0}
+.pm b{display:block;font-size:12px;color:#6a6a6a;font-weight:500}
+.paper table{width:100%;border-collapse:collapse}
+.paper th{text-align:left;font-size:12px;color:#6a6a6a;font-weight:500;border-bottom:1px solid #ddd;padding:6px 0}
+.paper td{padding:8px 0;border-bottom:1px solid #eee;vertical-align:top}
+.r{text-align:right!important}
+.tt{margin:14px 0 0 auto;width:min(260px,100%)}
+.tt div{display:flex;justify-content:space-between;padding:3px 0}
+.tt .tot{border-top:2px solid var(--ac,#0F5C4D);margin-top:6px;padding-top:8px;font:800 20px "Bricolage Grotesque",sans-serif}
+.wm{position:absolute;inset:0;display:grid;place-items:center;pointer-events:none;font:800 64px "Bricolage Grotesque",sans-serif;color:#0000000d;transform:rotate(-24deg);text-align:center;line-height:1}
+.dl{display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin-top:14px}
+section.s{padding:64px 0 0}
+section.s>h2{font-size:clamp(28px,4vw,40px);font-weight:800;margin-bottom:8px}
+section.s>p{color:var(--mute);margin:0 0 26px;max-width:60ch}
+.plans{display:grid;gap:16px;grid-template-columns:1fr}
+@media(min-width:860px){.plans{grid-template-columns:repeat(3,1fr)}}
+.plan{display:flex;flex-direction:column;background:var(--sf);border:1px solid var(--line);border-radius:14px;padding:24px}
+.plan.hot{background:var(--brand);color:var(--bi);border-color:var(--brand)}
+.plan h3{font-size:22px}
+.price{font:800 44px "Bricolage Grotesque",sans-serif;margin:10px 0 2px;letter-spacing:-.03em}
+.price small{font:500 15px "DM Sans",sans-serif;opacity:.7}
+.plan ul{list-style:none;padding:0;margin:16px 0 22px;display:grid;gap:9px;flex:1}
+.plan li::before{content:"✓";font-weight:700;margin-right:9px;color:var(--brand)}
+.plan.hot li::before{color:var(--sig)}
+.plan .btn{width:100%}
+.plan.hot .btn{background:var(--bi);color:var(--brand);border-color:var(--bi)}
+details{border-bottom:1px solid var(--line);padding:16px 0;max-width:780px}
+summary{cursor:pointer;font-weight:700;font-size:17px}
+details p{color:var(--mute);margin:10px 0 0}
+footer{padding:56px 0 40px;color:var(--mute);font-size:14px}
+dialog{border:1px solid var(--line);border-radius:14px;background:var(--sf);color:var(--ink);max-width:420px;padding:26px}
+dialog::backdrop{background:#0007}
+dialog h3{font-size:24px;margin-bottom:10px}
+dialog p{color:var(--mute);margin:0 0 18px}
+dialog .row{display:flex;gap:10px;flex-wrap:wrap}
+.card{box-shadow:0 1px 2px #0000000a}.btn{transition:border-color .15s,transform .1s}.btn:hover{border-color:var(--brand)}.btn:active{transform:translateY(1px)}
+input:focus,select:focus,textarea:focus{border-color:var(--brand)}
+.stamp{position:absolute;top:92px;right:34px;border:3px solid #1a7f4b;color:#1a7f4b;border-radius:6px;padding:2px 12px;font:800 18px "Bricolage Grotesque",sans-serif;transform:rotate(-8deg);opacity:.85}
+@media print{.np{display:none!important}body{background:#fff}.wrap{max-width:none;padding:0}.tool{display:block}.pv{position:static}.paper{box-shadow:none;border-radius:0}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="np">
+  <div class="logo">Facturalo<i></i></div>
+  <nav><a href="#precios">Planes</a><a href="#faq">Preguntas</a><a href="#precios" class="badge" id="badge">Plan Gratis</a></nav>
+</header>
+
+<div class="hero np">
+  <h1>Facturas profesionales listas en dos minutos</h1>
+  <p>Completa los datos, mira la factura al instante y descárgala en PDF. Sin cuenta, sin instalar nada.</p>
+</div>
+
+<main class="tool">
+  <div class="np">
+    <div class="card">
+      <h2>Datos de la factura</h2>
+      <div class="g">
+        <label>Tipo de documento<select data-k="doc"><option>Factura</option><option>Cotización</option><option>Recibo</option><option>Nota de crédito</option></select></label><label>Estado<select data-k="status"><option>Pendiente</option><option>Pagada</option></select></label>
+        <label class="full">Tu negocio<input data-k="biz" autocomplete="organization"></label>
+        <label class="full">Dirección, teléfono o correo<textarea data-k="bizInfo"></textarea></label>
+        <label class="full">ID fiscal (RNC, RFC, NIF...)<input data-k="bizTax"></label>
+        <label class="full">Logo <span class="lock" id="lkLogo">Pro</span><input type="file" id="logo" accept="image/*"></label>
+        <label class="full">Cliente<input data-k="client"></label>
+        <label class="full">Datos del cliente<textarea data-k="clientInfo"></textarea></label>
+        <label class="full">ID fiscal del cliente<input data-k="clientTax"></label>
+        <label>Número de factura<input data-k="num"></label>
+        <label>Moneda<select data-k="cur" id="cur"></select></label>
+        <label>Fecha<input type="date" data-k="date"></label>
+        <label>Vencimiento<input type="date" data-k="due"></label>
+        <label>Nombre del impuesto<input data-k="taxName" placeholder="IVA, ITBIS, IGV..."></label><label>Impuesto (%)<input type="number" min="0" step="0.5" data-k="tax"></label>
+        <label>Descuento (%)<input type="number" min="0" step="0.5" data-k="disc"></label><label>Envío o recargo<input type="number" min="0" step="0.01" data-k="ship"></label><label>Anticipo pagado<input type="number" min="0" step="0.01" data-k="paid"></label>
+        <label class="full">Color de la factura <span class="lock" id="lkColor">Business</span><input type="color" data-k="color" id="color"></label>
+      </div>
+    </div>
+    <div class="card" style="margin-top:16px">
+      <h2>Conceptos</h2>
+      <div class="items" id="items"></div>
+      <button class="btn" id="add" type="button">Agregar línea</button>
+      <label style="margin-top:14px">Notas o instrucciones de pago<textarea data-k="notes"></textarea></label>
+    </div>
+  </div>
+
+  <div class="pv">
+    <div class="paper" id="paper"></div>
+    <div class="dl np">
+      <button class="btn pri" id="dl" type="button">Descargar PDF</button><button class="btn" id="nw" type="button">Nueva factura</button>
+      <span class="note" id="use"></span>
+    </div>
+    <p class="note np">En el diálogo de impresión elige «Guardar como PDF». <span id="sv"></span></p>
+  </div>
+</main>
+
+<section class="s np" id="precios">
+  <h2>Empieza gratis, crece cuando lo necesites</h2>
+  <p>Cancela cuando quieras. Los precios están en dólares por mes.</p>
+  <div class="plans">
+    <div class="plan"><h3>Gratis</h3><div class="price">$0</div>
+      <ul><li>3 descargas en PDF al mes</li><li>Todas las monedas</li><li>Con marca de agua de Facturalo</li></ul>
+      <button class="btn" data-plan="free" type="button">Usar gratis</button></div>
+    <div class="plan hot"><h3>Pro</h3><div class="price">$7<small> /mes</small></div>
+      <ul><li>Descargas en PDF ilimitadas</li><li>Sin marca de agua</li><li>Tu logo en cada factura</li></ul>
+      <button class="btn" data-plan="pro" type="button">Elegir Pro</button></div>
+    <div class="plan"><h3>Business</h3><div class="price">$15<small> /mes</small></div>
+      <ul><li>Todo lo de Pro</li><li>Color de marca en la factura</li><li>Numeración automática</li></ul>
+      <button class="btn" data-plan="business" type="button">Elegir Business</button></div>
+  </div>
+</section>
+
+<section class="s np" id="faq">
+  <h2>Preguntas frecuentes</h2>
+  <p>Lo que más nos preguntan al crear una factura online.</p>
+  <details><summary>¿Cómo hago una factura online gratis?</summary><p>Completa tus datos, los de tu cliente y los conceptos. La vista previa se actualiza sola y puedes descargarla en PDF desde el botón de abajo de la factura.</p></details>
+  <details><summary>¿Necesito crear una cuenta?</summary><p>No. Tus datos se guardan solo en tu navegador y no se envían a ningún servidor.</p></details>
+  <details><summary>¿Puedo facturar en mi moneda?</summary><p>Sí. Puedes elegir dólares, pesos dominicanos, euros, pesos mexicanos o pesos colombianos.</p></details>
+  <details><summary>¿Esta factura tiene validez fiscal?</summary><p>Facturalo genera un documento de cobro. Si tu país exige comprobantes fiscales autorizados, consulta con tu contador o con la autoridad tributaria.</p></details>
+</section>
+<footer class="np">© 2026 Facturalo. Hecho para freelancers y pequeños negocios. <span id="fl"></span></footer>
+</div>
+
+<dialog id="dlg"><h3 id="dt"></h3><p id="dp"></p><div class="row"><button class="btn pri" id="dgo" type="button"></button><button class="btn" id="dx" type="button">Cerrar</button></div></dialog>
+
+<script src="config.js"></script>
+<script>
+const CFG=window.FACTURALO||{};
+const PAYMENT_LINKS=CFG.PAYMENT_LINKS||{pro:'',business:''};
+const NAMES={free:'Gratis',pro:'Pro',business:'Business'};
+const LIMIT=3;
+const $=q=>document.querySelector(q);
+const esc=t=>String(t==null?'':t).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const st={get(k){try{return localStorage.getItem(k)}catch(e){return null}},set(k,v){try{localStorage.setItem(k,v)}catch(e){}}};
+let plan=st.get('fy_plan');if(!NAMES[plan])plan='free';
+const mk=new Date().toISOString().slice(0,7);
+const usage=()=>{try{const u=JSON.parse(st.get('fy_usage')||'{}');return u.m===mk?u.n:0}catch(e){return 0}};
+const iso=d=>d.toISOString().slice(0,10);
+const today=new Date(),due=new Date(Date.now()+12096e5);
+const s={doc:'Factura',status:'Pendiente',bizTax:'',clientTax:'',taxName:'Impuesto',ship:0,paid:0,biz:'Estudio Norte',bizInfo:'Av. Principal 123\ncontacto@estudionorte.com',client:'Cliente de ejemplo S.A.',clientInfo:'Calle Comercio 45\nfacturas@cliente.com',num:'0001',cur:'USD',date:iso(today),due:iso(due),tax:18,disc:0,color:'#0F5C4D',notes:'Pago por transferencia en un plazo de 15 días.',logo:'',
+items:[{d:'Diseño de identidad visual',q:1,p:850},{d:'Sitio web de 5 páginas',q:1,p:1400},{d:'Horas de soporte',q:4,p:45}]};
+try{const sv=JSON.parse(st.get('fy_state')||'null');if(sv&&typeof sv==='object')Object.assign(s,sv)}catch(e){}
+let tm;function save(){clearTimeout(tm);tm=setTimeout(()=>{st.set('fy_state',JSON.stringify(s));const e=$('#sv');if(e)e.textContent='Guardado automáticamente en este navegador.'},300)}
+const money=n=>{try{return new Intl.NumberFormat('es',{style:'currency',currency:s.cur}).format(n||0)}catch(e){return(n||0).toFixed(2)+' '+s.cur}};
+const fd=v=>{if(!v)return'';const[y,m,d]=v.split('-');return d+'/'+m+'/'+y};
+const br=t=>esc(t).replace(/\n/g,'<br>');
+
+function render(){save();
+  let sub=0;s.items.forEach(i=>sub+=i.q*i.p);
+  const dc=sub*s.disc/100,base=sub-dc,tx=base*s.tax/100,tot=base+tx+s.ship,bal=tot-s.paid;
+  const rows=s.items.map(i=>`<tr><td>${esc(i.d)}</td><td class="r">${i.q}</td><td class="r">${money(i.p)}</td><td class="r">${money(i.q*i.p)}</td></tr>`).join('');
+  $('#paper').style.setProperty('--ac',plan==='business'?s.color:'#0F5C4D');
+  $('#paper').innerHTML=`
+  <div class="top"><div>${plan!=='free'&&s.logo?`<img src="${s.logo}" alt="Logo">`:''}<div class="pn">${esc(s.biz)}</div><div>${br(s.bizInfo)}</div>${s.bizTax?`<div>${esc(s.bizTax)}</div>`:''}</div><h3>${esc(s.doc)}</h3></div>${s.status==='Pagada'?'<div class="stamp">Pagada</div>':''}
+  <div class="pm"><div><b>Facturar a</b>${esc(s.client)}<br>${br(s.clientInfo)}${s.clientTax?'<br>'+esc(s.clientTax):''}</div>
+  <div><b>Número</b>${esc(s.num)}<b style="margin-top:8px">Fecha</b>${fd(s.date)}<b style="margin-top:8px">Vence</b>${fd(s.due)}</div></div>
+  <table><thead><tr><th>Concepto</th><th class="r">Cant.</th><th class="r">Precio</th><th class="r">Importe</th></tr></thead><tbody>${rows}</tbody></table>
+  <div class="tt"><div><span>Subtotal</span><span>${money(sub)}</span></div>
+  ${s.disc>0?`<div><span>Descuento (${s.disc}%)</span><span>−${money(dc)}</span></div>`:''}
+  ${s.tax>0?`<div><span>${esc(s.taxName||'Impuesto')} (${s.tax}%)</span><span>${money(tx)}</span></div>`:''}${s.ship>0?`<div><span>Envío o recargo</span><span>${money(s.ship)}</span></div>`:''}
+  <div class="tot"><span>Total</span><span>${money(tot)}</span></div>${s.paid>0?`<div><span>Anticipo pagado</span><span>−${money(s.paid)}</span></div><div style="font-weight:700"><span>Saldo pendiente</span><span>${money(bal)}</span></div>`:''}</div>
+  ${s.notes?`<p style="margin-top:22px;color:#555">${br(s.notes)}</p>`:''}
+  ${plan==='free'?'<div class="wm">Creada con<br>Facturalo</div>':''}`;
+}
+function renderItems(){
+  $('#items').innerHTML=s.items.map((i,n)=>`<div class="it"><input data-i="${n}" data-f="d" value="${esc(i.d)}" placeholder="Descripción" aria-label="Descripción"><input type="number" min="0" data-i="${n}" data-f="q" value="${i.q}" aria-label="Cantidad"><input type="number" min="0" step="0.01" data-i="${n}" data-f="p" value="${i.p}" aria-label="Precio"><button class="x" type="button" data-rm="${n}" aria-label="Quitar línea">×</button></div>`).join('');
+}
+function refreshPlan(){
+  $('#badge').textContent='Plan '+NAMES[plan];
+  $('#lkLogo').style.display=plan==='free'?'':'none';
+  $('#lkColor').style.display=plan==='business'?'none':'';
+  document.querySelectorAll('[data-plan]').forEach(b=>{const p=b.dataset.plan;b.textContent=p===plan?'Plan actual':(p==='free'?'Usar gratis':'Elegir '+NAMES[p])});
+  $('#use').textContent=plan==='free'?`Te quedan ${Math.max(0,LIMIT-usage())} de ${LIMIT} descargas este mes.`:'Descargas ilimitadas.';
+  render();
+}
+function setPlan(p){plan=p;st.set('fy_plan',p);refreshPlan()}
+function openPlan(p,why){
+  const link=PAYMENT_LINKS[p];
+  $('#dt').textContent='Plan '+NAMES[p];
+  $('#dp').textContent=why+(link?'':' Los pagos se activan en el siguiente paso; mientras tanto puedes probar este plan en modo demo.');
+  $('#dgo').textContent=link?'Ir a pagar':'Probar en modo demo';
+  $('#dgo').onclick=()=>{if(link)window.open(link,'_blank','noopener');else setPlan(p);$('#dlg').close()};
+  $('#dlg').showModal();
+}
+const nextNum=n=>{const m=String(n).match(/^(.*?)(\d+)$/);return m?m[1]+String(+m[2]+1).padStart(m[2].length,'0'):n};
+
+document.addEventListener('input',e=>{
+  const t=e.target;
+  if(t.dataset.k){s[t.dataset.k]=t.type==='number'?(+t.value||0):t.value;render()}
+  else if(t.dataset.i!==undefined){const f=t.dataset.f;s.items[t.dataset.i][f]=f==='d'?t.value:(+t.value||0);render()}
+});
+document.addEventListener('click',e=>{
+  const t=e.target;
+  if(t.dataset.rm!==undefined){s.items.splice(+t.dataset.rm,1);renderItems();render()}
+  if(t.dataset.plan){t.dataset.plan==='free'?setPlan('free'):openPlan(t.dataset.plan,t.dataset.plan==='pro'?'Quita la marca de agua, sube tu logo y descarga sin límite.':'Todo lo de Pro, más color de marca y numeración automática.')}
+});
+$('#add').onclick=()=>{s.items.push({d:'',q:1,p:0});renderItems();render()};
+$('#dx').onclick=()=>$('#dlg').close();
+$('#color').addEventListener('click',e=>{if(plan!=='business'){e.preventDefault();openPlan('business','El color de marca es parte del plan Business.')}});
+$('#logo').addEventListener('click',e=>{if(plan==='free'){e.preventDefault();openPlan('pro','Subir tu logo es parte del plan Pro.')}});
+$('#logo').addEventListener('change',e=>{
+  const f=e.target.files[0];if(!f||f.size>1.5e6)return;
+  const r=new FileReader();r.onload=()=>{s.logo=r.result;render()};r.readAsDataURL(f);
+});
+$('#nw').onclick=()=>{
+  Object.assign(s,{num:nextNum(s.num),client:'',clientInfo:'',clientTax:'',status:'Pendiente',paid:0,ship:0,disc:0,date:iso(new Date()),due:iso(new Date(Date.now()+12096e5)),items:[{d:'',q:1,p:0}]});
+  syncFields();renderItems();render();
+};
+$('#dl').onclick=()=>{
+  if(plan==='free'){
+    if(usage()>=LIMIT){openPlan('pro','Usaste tus 3 descargas gratis de este mes.');return}
+    st.set('fy_usage',JSON.stringify({m:mk,n:usage()+1}));
+  }
+  refreshPlan();
+  window.print();
+  if(plan==='business'){s.num=nextNum(s.num);document.querySelector('[data-k=num]').value=s.num;render()}
+};
+function fillCur(){
+  const pop=['USD','DOP','EUR','MXN','COP','ARS','CLP','PEN','UYU','BOB','PYG','VES','CRC','GTQ','HNL','NIO','PAB','CUP','BRL','CAD','GBP','CHF','JPY','CNY'];
+  let all=pop;try{all=Intl.supportedValuesOf('currency')}catch(e){}
+  let dn=null;try{dn=new Intl.DisplayNames(['es'],{type:'currency'})}catch(e){}
+  const opt=c=>{let n='';try{n=dn?' – '+dn.of(c):''}catch(e){}return`<option value="${c}">${c}${esc(n)}</option>`};
+  $('#cur').innerHTML='<optgroup label="Más usadas">'+pop.map(opt).join('')+'</optgroup><optgroup label="Todas las monedas">'+all.filter(c=>!pop.includes(c)).map(opt).join('')+'</optgroup>';
+}
+const syncFields=()=>document.querySelectorAll('[data-k]').forEach(el=>{if(s[el.dataset.k]!==undefined)el.value=s[el.dataset.k]});
+fillCur();syncFields();
+try{const q=new URLSearchParams(location.search),p=q.get('plan'),sid=q.get('session_id')||'';
+if((p==='pro'||p==='business')&&sid.indexOf('cs_')===0){plan=p;st.set('fy_plan',p);history.replaceState(null,'',location.pathname)}}catch(e){}
+$('#fl').innerHTML=[CFG.PORTAL_LINK?`<a href="${esc(CFG.PORTAL_LINK)}" target="_blank" rel="noopener">Gestionar suscripción</a>`:'',CFG.SUPPORT_EMAIL?`<a href="mailto:${esc(CFG.SUPPORT_EMAIL)}">Soporte</a>`:''].filter(Boolean).join(' · ');
+renderItems();refreshPlan();
+</script>
+</body>
+</html>
